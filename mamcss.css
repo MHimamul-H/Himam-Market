@@ -1,6 +1,13 @@
 body {
-    background-color: #080710;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
 }
+
 .backround {
     width: 430px;
     height: 480px;
@@ -9,89 +16,123 @@ body {
     left: 50%;
     top: 50%;
 }
+
 .backround .shape {
-    height: 20px;
-    width: 200px;
+    height: 220px;
+    width: 220px;
     position: absolute;
     border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.7;
 }
+
 .shape:first-child {
-    background: linear-gradient(#1845ad, #23a2f6);
-    left: -80px;
+    background: linear-gradient(135deg, #1845ad, #23a2f6);
+    left: -120px;
     top: -80px;  
 }
+
 .shape:last-child {
-    background: linear-gradient(to right, #ff512f, #f09819);
-    right: -30px;
+    background: linear-gradient(135deg, #ff512f, #f09819);
+    right: -100px;
     bottom: -80px;
 }
+
 form {
-    height: 520px;
+    height: auto;
     width: 400px;
-    background-color: rgba(175, 240, 185, 0.13);
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(8, 7, 16, 0.6);
-    padding: 50px 35px;
+    background: rgba(255, 255, 255, 0.08);
+    position: relative;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
-form * {
-    font-family: "poppins" , sans-serif;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
-}
+
 form h3 {
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38px;
     text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
 }
+
 label {
     display: block;
-    margin-top: 30px;
-    font-size: 16px;
+    margin-top: 20px;
+    font-size: 14px;
     font-weight: 500;
+    color: #ddd;
 }
+
 input {
     display: block;
     height: 50px;
     width: 100%;
-    background-color: rgba(255, 255, 255,0.07);
-    border-radius: 3px;
-    padding: 0 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0 15px;
     margin-top: 8px;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
+    color: #fff;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
 }
+
+input:focus {
+    border: 1px solid #23a2f6;
+    box-shadow: 0 0 8px #23a2f6;
+}
+
 ::placeholder {
-    color: #e5e5e5;
+    color: #aaa;
 }
+
 button {
-    margin-top: 50px;
-    width: 100%;
-    background-color: #ffffff;
-    color: #880710;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.social {
     margin-top: 30px;
+    width: 100%;
+    background: linear-gradient(135deg, #23a2f6, #1845ad);
+    color: #fff;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1845ad, #23a2f6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.social {
+    margin-top: 25px;
     display: flex;
+    justify-content: center;
+    gap: 15px;
 }
+
+.social div {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 .social div:hover {
-    background-color: rgba(255, 255, 255,0.47);
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
 }
-.social .fb {
-    margin-left: 25px;
-}
-.social i{
-    margin-right: 4px;
+
+.social i {
+    margin-right: 6px;
 }
